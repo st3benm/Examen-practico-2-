@@ -54,3 +54,36 @@ function examen() {
     }
     console.log("Lista completa de libros=", pila);
 }
+
+function examen2() {
+    const pila = [];
+    pila.push({ titulo: "Medicina artesnal", autor: "Cristina Torres", año: 2024 }),
+        pila.push({ titulo: "Atlas", autor: "Daniela Medina", año: 2015 }),
+        pila.push({ titulo: "Hervez", autor: "Elma Solorzano", año: 2018 })
+    console.log("Su pila actuales :", pila)
+    console.log(`-------------Ultimo libro borrado  con pop--------------`)
+    eliminado = pila.pop();
+    function isEmpty(pila) {
+        return pila.length === 0;
+    }
+
+    if (isEmpty(pila)) {
+        console.log(`La pila esta vacia `)
+    } else {
+        console.log(`Su pila tiene ${pila.length} libros `)
+    }
+    console.log("Libro eliminado:", eliminado)
+    console.log(`----------peek-------------------`)
+    let bebe = pila[pila.length - 1]
+    console.log("Libro encima de la pila:", bebe)
+    while (!isEmpty(pila)) {
+        let eliminados = pila.pop();
+        console.log("Eliminados de la pila:",eliminados)
+    }
+    console.log(`La pila esta vacia `)
+}
+
+
+
+
+
